@@ -5,7 +5,6 @@ import '../models/tangkapan.dart';
 import '../theme.dart';
 import '../utils/format.dart';
 import '../widgets/bar_bawah.dart';
-import '../widgets/foto_tangkapan.dart';
 import 'detail_screen.dart';
 import 'form_screen.dart';
 
@@ -104,15 +103,15 @@ class _DaftarScreenState extends State<DaftarScreen> {
                 : _data.isEmpty
                 ? const _KosongView()
                 : ListView.separated(
-                    padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-                    itemCount: _data.length,
-                    separatorBuilder: (context, index) =>
-                        const SizedBox(height: 10),
-                    itemBuilder: (context, i) => _KartuTangkapan(
-                      item: _data[i],
-                      onTap: () => _buka(_data[i]),
-                    ),
-                  ),
+              padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
+              itemCount: _data.length,
+              separatorBuilder: (context, index) =>
+              const SizedBox(height: 10),
+              itemBuilder: (context, i) => _KartuTangkapan(
+                item: _data[i],
+                onTap: () => _buka(_data[i]),
+              ),
+            ),
           ),
         ],
       ),
@@ -296,16 +295,9 @@ class _KartuTangkapan extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(14),
           child: Row(
             children: [
-              FotoTangkapan(
-                path: item.pathFoto,
-                lebar: 56,
-                tinggi: 56,
-                radius: 10,
-              ),
-              const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -328,15 +320,6 @@ class _KartuTangkapan extends StatelessWidget {
                         color: Warna.teksRedup,
                       ),
                     ),
-                    if (item.punyaLokasi)
-                      Text(
-                        formatKoordinatSingkat(
-                            item.latitude!, item.longitude!),
-                        style: const TextStyle(
-                          fontSize: 13,
-                          color: Warna.teksRedup,
-                        ),
-                      ),
                   ],
                 ),
               ),

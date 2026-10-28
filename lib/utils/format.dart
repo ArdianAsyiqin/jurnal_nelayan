@@ -28,19 +28,6 @@ String formatRupiah(double nilai) {
   return '${nilai < 0 ? '-' : ''}Rp $buf';
 }
 
-String _derajat(double v, int digit) =>
-    v.abs().toStringAsFixed(digit).replaceAll('.', ',');
-
-/// "1,0456°N, 104,0305°E"
-String formatKoordinat(double lat, double lng) =>
-    '${_derajat(lat, 4)}°${lat >= 0 ? 'N' : 'S'}, '
-    '${_derajat(lng, 4)}°${lng >= 0 ? 'E' : 'W'}';
-
-/// Versi singkat: "1,05°N 104,03°E"
-String formatKoordinatSingkat(double lat, double lng) =>
-    '${_derajat(lat, 2)}°${lat >= 0 ? 'N' : 'S'} '
-    '${_derajat(lng, 2)}°${lng >= 0 ? 'E' : 'W'}';
-
 /// Berat memakai koma desimal: "12,5" atau "12.5" -> 12.5.
 double? parseBerat(String teks) =>
     double.tryParse(teks.trim().replaceAll(',', '.'));

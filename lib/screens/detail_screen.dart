@@ -5,7 +5,6 @@ import '../models/tangkapan.dart';
 import '../theme.dart';
 import '../utils/format.dart';
 import '../widgets/bar_bawah.dart';
-import '../widgets/foto_tangkapan.dart';
 import 'form_screen.dart';
 
 /// Layar detail. Mengubah atau menghapus langsung ke database, lalu kembali
@@ -32,7 +31,7 @@ class DetailScreen extends StatelessWidget {
         title: const Text('Hapus catatan?'),
         content: Text(
           'Catatan ${item.jenisIkan} tanggal ${formatTanggal(item.tanggal)} '
-          'akan dihapus.',
+              'akan dihapus.',
         ),
         actions: [
           TextButton(
@@ -68,12 +67,6 @@ class DetailScreen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          FotoTangkapan(
-            path: item.pathFoto,
-            lebar: double.infinity,
-            tinggi: 220,
-            ukuranIkon: 72,
-          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
             child: Column(
@@ -99,12 +92,6 @@ class DetailScreen extends StatelessWidget {
                 _Baris(
                   label: 'Estimasi pendapatan',
                   nilai: pendapatan == null ? '-' : formatRupiah(pendapatan),
-                ),
-                _Baris(
-                  label: 'Lokasi',
-                  nilai: item.punyaLokasi
-                      ? formatKoordinat(item.latitude!, item.longitude!)
-                      : '-',
                 ),
                 _Baris(
                   label: 'Catatan',

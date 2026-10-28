@@ -8,8 +8,6 @@ final List<Tangkapan> dataContoh = [
     jenisIkan: 'Kakap Merah',
     beratKg: 12.5,
     hargaPerKg: 45000,
-    latitude: 1.0456,
-    longitude: 104.0305,
     catatan: 'Cerah, ombak tenang',
   ),
   Tangkapan(
@@ -18,8 +16,6 @@ final List<Tangkapan> dataContoh = [
     jenisIkan: 'Tongkol',
     beratKg: 30,
     hargaPerKg: 28000,
-    latitude: 1.0712,
-    longitude: 104.0148,
     catatan: 'Berawan, arus cukup kuat',
   ),
   Tangkapan(
@@ -28,8 +24,6 @@ final List<Tangkapan> dataContoh = [
     jenisIkan: 'Cumi-cumi',
     beratKg: 8,
     hargaPerKg: 60000,
-    latitude: 1.0391,
-    longitude: 104.0627,
     catatan: 'Malam hari, memakai lampu',
   ),
   Tangkapan(
@@ -38,8 +32,6 @@ final List<Tangkapan> dataContoh = [
     jenisIkan: 'Tenggiri',
     beratKg: 15,
     hargaPerKg: 55000,
-    latitude: 1.0583,
-    longitude: 104.0219,
     catatan: 'Gerimis ringan',
   ),
 ];

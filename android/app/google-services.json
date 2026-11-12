@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "628752397082",
+    "project_id": "logbook-tangkapan",
+    "storage_bucket": "logbook-tangkapan.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628752397082:android:05313901900e590a06b2a3",
+        "android_client_info": {
+          "package_name": "com.example.jurnal_nelayan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLz_06KOcnR36j6KzoPvJkjRud7XDdXeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
